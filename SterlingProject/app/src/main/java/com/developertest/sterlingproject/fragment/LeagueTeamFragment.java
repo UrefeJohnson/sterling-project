@@ -66,7 +66,7 @@ public class LeagueTeamFragment extends Fragment {
         return rootView;
     }
 
-    String[] fruitNames = {"Apple","Orange","strawberry","Melon","Kiwi","Banana"};
+    String[] fruitNames = {"Arsenal","Liverpool","Manchester United","Chelsea","Hull City","Burnley FC"};
     int[] fruitImages = {R.drawable.ic_launcher_foreground_arrow,R.drawable.ic_launcher_foreground_arrow, R.drawable.ic_launcher_foreground_arrow,
             R.drawable.ic_launcher_foreground_arrow,R.drawable.ic_launcher_foreground_arrow,R.drawable.ic_launcher_foreground_arrow};
 
