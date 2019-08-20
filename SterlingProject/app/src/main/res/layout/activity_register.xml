@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layout_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100sp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColorHint="@android:color/background_light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First name"
+                    android:imeOptions="actionNext"
+                    android:maxLength="26"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/background_light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last name"
+                    android:imeOptions="actionNext"
+                    android:maxLength="26"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_email_address"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/background_light">
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/background_light">
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="user name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/background_light">
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="26"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_confirm_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/background_light">
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Repeat password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="26"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <Button
+                android:id="@+id/btn_cancel_register"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:text="Login"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_save_register"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Register"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

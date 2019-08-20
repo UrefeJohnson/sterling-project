@@ -1,36 +1,44 @@
 package com.developertest.sterlingproject;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
+import android.support.annotation.NonNull;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
 
-import com.developertest.sterlingproject.ui.main.SectionsPagerAdapter;
+import com.developertest.sterlingproject.fragment.CompetitionFragment;
+import com.developertest.sterlingproject.fragment.FixtureFragment;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView mTextMessage;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            switch (item.getItemId()) {
+                case R.id.navigation_fixtures:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FixtureFragment()).commit();
+                    break;
+                case R.id.navigation_leagues:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CompetitionFragment()).commit();
+                    break;
+            }
+            return true;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        mTextMessage = findViewById(R.id.message);
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FixtureFragment()).commit();
     }
+
 }
